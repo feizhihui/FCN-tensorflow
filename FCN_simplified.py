@@ -7,7 +7,6 @@ import TensorflowUtils as utils
 import read_MITSceneParsingData as scene_parsing
 import datetime
 import BatchReader as dataset
-from six.moves import xrange
 import os
 
 os.environ["CUDA_VISIABLE_DEVICES"] = "3,2,1,0"
@@ -196,7 +195,7 @@ def main(argv=None):
         print("Model restored...")
 
     if FLAGS.mode == "train":
-        for itr in xrange(MAX_ITERATION):
+        for itr in range(MAX_ITERATION):
             train_images, train_annotations = train_dataset_reader.next_batch(FLAGS.batch_size)
             feed_dict = {image: train_images, annotation: train_annotations, keep_probability: 0.85}
 
