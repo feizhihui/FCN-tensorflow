@@ -1,4 +1,3 @@
-from __future__ import print_function
 import tensorflow as tf
 import numpy as np
 
@@ -172,7 +171,7 @@ def main(argv=None):
 
     print("Setting up image reader...")
     # Data_zoo/MIT_SceneParsing/
-    train_records, valid_records = scene_parsing.read_dataset(FLAGS.data_dir)  
+    train_records, valid_records = scene_parsing.read_dataset(FLAGS.data_dir)
     print(len(train_records))
     print(len(valid_records))
 
