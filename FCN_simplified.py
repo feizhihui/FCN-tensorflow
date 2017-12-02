@@ -29,17 +29,17 @@ IMAGE_SIZE = 224
 # construct vgg model, if need variables, feed the pretrained parameters
 def vgg_net(weights, image):
     layers = (
-        'conv1_1', 'relu1_1', 'conv1_2', 'relu1_2', 'pool1',  # output: 128*128*64
+        'conv1_1', 'relu1_1', 'conv1_2', 'relu1_2', 'pool1',  # output: 112*112*64
 
-        'conv2_1', 'relu2_1', 'conv2_2', 'relu2_2', 'pool2',  # output: 64*64*128
+        'conv2_1', 'relu2_1', 'conv2_2', 'relu2_2', 'pool2',  # output: 56*56*128
 
-        'conv3_1', 'relu3_1', 'conv3_2', 'relu3_2', 'conv3_3',  # output: 32*32*256
+        'conv3_1', 'relu3_1', 'conv3_2', 'relu3_2', 'conv3_3',  # output: 28*28*256
         'relu3_3', 'conv3_4', 'relu3_4', 'pool3',
 
-        'conv4_1', 'relu4_1', 'conv4_2', 'relu4_2', 'conv4_3',  # output: 16*16*512
+        'conv4_1', 'relu4_1', 'conv4_2', 'relu4_2', 'conv4_3',  # output: 14*14*512
         'relu4_3', 'conv4_4', 'relu4_4', 'pool4',
 
-        'conv5_1', 'relu5_1', 'conv5_2', 'relu5_2', 'conv5_3',  # output: 8*8*512
+        'conv5_1', 'relu5_1', 'conv5_2', 'relu5_2', 'conv5_3',  # output: 7*7*512
         'relu5_3', 'conv5_4', 'relu5_4'
     )  # followed by three FN
 
